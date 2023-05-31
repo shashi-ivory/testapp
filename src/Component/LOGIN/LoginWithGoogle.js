@@ -14,7 +14,7 @@ import { colors } from "../../Utils/colors";
 
 WebBrowser.maybeCompleteAuthSession();
 
-export default function LoginWithGoogle() {
+export default function LoginWithGoogle({ navigation }) {
   const [token, setToken] = useState("");
   const [userInfo, setUserInfo] = useState(null);
 
@@ -92,6 +92,16 @@ export default function LoginWithGoogle() {
             />
             <Text style={styles.buttonText}>Sign in with Google</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button2}
+            onPress={() => {
+              navigation.navigate("RegistrationPage");
+            }}
+          >
+            <View style={styles.Registbutton}>
+              <Text style={styles.register}>Registration</Text>
+            </View>
+          </TouchableOpacity>
         </>
       ) : (
         <View style={styles.card}>
@@ -114,7 +124,7 @@ export default function LoginWithGoogle() {
             borderRadius: 20,
           }}
         >
-          <TouchableOpacity title="Sign Out" onPress={handleSignOut}>
+          <TouchableOpacity onPress={handleSignOut}>
             <Text> Sign Out</Text>
           </TouchableOpacity>
         </View>
@@ -126,9 +136,17 @@ export default function LoginWithGoogle() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colors.white,
     alignItems: "center",
     justifyContent: "center",
+  },
+  register: {
+    fontSize: 20,
+    fontWeight: "bold",
+
+    color: colors.white,
+    textAlign: "center",
+    backgroundColor: colors.green,
   },
   text: {
     fontSize: 20,
@@ -149,13 +167,35 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
-    backgroundColor: "#4285F4",
+    backgroundColor: colors.blue,
     borderRadius: 5,
     marginTop: 10,
   },
   buttonText: {
-    color: "#fff",
-    fontSize: 16,
+    color: colors.white,
+
     fontWeight: "bold",
+  },
+  registerText: {
+    color: colors.white,
+
+    alignSelf: "center",
+  },
+  Registbutton: {
+    backgroundColor: colors.green,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+  },
+  button2: {
+    marginTop: 5,
+    height: "8%",
+
+    width: "50%",
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    backgroundColor: colors.green,
+    borderRadius: 5,
   },
 });

@@ -12,4 +12,5 @@ export const colors = {
   red: "red",
   offWhite: "#ccc",
   offPink: "#F8C8DC",
+  blue: "#4285F4",
 };
