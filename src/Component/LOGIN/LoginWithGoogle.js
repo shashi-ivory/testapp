@@ -115,7 +115,7 @@ export default function LoginWithGoogle({ navigation }) {
       {userInfo ? (
         <View
           style={{
-            backgroundColor: colors.green,
+            backgroundColor: colors.blue,
             marginTop: 20,
             height: 40,
             width: 80,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
 
     color: colors.white,
     textAlign: "center",
-    backgroundColor: colors.green,
+    backgroundColor: colors.blue,
   },
   text: {
     fontSize: 20,
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   Registbutton: {
-    backgroundColor: colors.green,
+    backgroundColor: colors.blue,
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    backgroundColor: colors.green,
+    backgroundColor: colors.blue,
     borderRadius: 5,
   },
 });
